@@ -2,7 +2,7 @@
 
 IModel model;
 
-// model = new CarModel("superb", "skoda");
+model = new CarModel("superb", "skoda");
 model = new RocketModel("superb", 161);
 
 
