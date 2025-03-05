@@ -1,26 +1,22 @@
 ﻿namespace InterfacesExample;
 
-public class CarCsvFileRepository : ICarRepository
+public class CarInMemoryRepository : ICarRepository
 {
-    private readonly List<CarModel> _models = new List<CarModel>();
-
+    private List<CarModel> cars = new List<CarModel>();
+    
     public CarModel? Get(Guid Id)
     {
-        foreach (var car in _models)
-        {
-            if (car.Id == Id) return car;
-        }
-        return null;
+        throw new NotImplementedException();
     }
+
     public List<CarModel> Get()
     {
-        return _models;
+        throw new NotImplementedException();
     }
 
     public void Insert(CarModel model)
     {
-        if (model == null) return;
-        _models.Add(model);
+        throw new NotImplementedException();
     }
 
     public void Update(CarModel model)
@@ -35,6 +31,6 @@ public class CarCsvFileRepository : ICarRepository
 
     public int RecordCount()
     {
-        return _models.Count;
+        throw new NotImplementedException();
     }
 }
