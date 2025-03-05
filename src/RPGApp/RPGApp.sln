@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGApp", "RPGApp\RPGApp.csproj", "{C23B1E6C-0AA2-4BE8-AE9C-EB972B0179AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGApp.DAL", "RPGApp.DAL\RPGApp.DAL.csproj", "{BB804F0A-B324-4C83-BBEB-1011297D73F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C23B1E6C-0AA2-4BE8-AE9C-EB972B0179AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23B1E6C-0AA2-4BE8-AE9C-EB972B0179AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23B1E6C-0AA2-4BE8-AE9C-EB972B0179AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23B1E6C-0AA2-4BE8-AE9C-EB972B0179AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB804F0A-B324-4C83-BBEB-1011297D73F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB804F0A-B324-4C83-BBEB-1011297D73F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB804F0A-B324-4C83-BBEB-1011297D73F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB804F0A-B324-4C83-BBEB-1011297D73F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
