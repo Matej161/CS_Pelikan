@@ -5,17 +5,17 @@ namespace OopExamples.Implementations;
 
 public class Computer : IComputer
 {
-    public IEntity Owner { get; init; }
-    public IMotherBoard MotherBoard { get; init; }
-    public ICPU Cpu { get; init; }
-    public IGPU Gpu { get; init; }
-    public IRAM Ram { get; init; }
-    public IPowerSupply PowerSupply { get; init; }
-    public ICase Case { get; init; }
-    public IMonitor[] Monitors { get; init; }
+    public IEntity Owner { get; set; }
+    public IMotherBoard MotherBoard { get; set; }
+    public ICPU Cpu { get; set; }
+    public IGPU Gpu { get; set; }
+    public IRAM Ram { get; set; }
+    public IPowerSupply PowerSupply { get; set; }
+    public ICase Case { get; set; }
+    public IMonitor[] Monitors { get; set; }
     public bool IsOn { get; set; }
-    public bool IsPersonalPC { get; }
-    public bool IsCompanyPC { get; }
+    public bool IsPersonalPC { get; set; }
+    public bool IsCompanyPC { get; set; }
     public void PowerUp()
     {
         IsOn = true;
@@ -55,6 +55,16 @@ public class Computer : IComputer
         {
             throw new ArgumentException("Invalid equation format.", ex);
         }
+    }
+
+    public void ChangeOwner(IEntity? newOwner)
+    {
+        Owner = newOwner;
+    }
+
+    public void RemoveOwner()
+    {
+        Owner = null;
     }
 
     public IComputer BuildNewComputer(IComputerConfiguration configuration)

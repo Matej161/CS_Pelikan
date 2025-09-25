@@ -4,43 +4,65 @@ namespace OopExamples.Implementations;
 
 public class ComputerBuilder : IComputerBuilder
 {
+    private IMotherBoard _motherBoard;
+    private ICPU _cpu;
+    private IGPU _gpu;
+    private IRAM _ram;
+    private IPowerSupply _powerSupply;
+    private ICase _case;
+    
     public IComputer BuildFromConfiguration(IComputerConfiguration configuration)
     {
-        throw new NotImplementedException();
+        Computer computer = new Computer();
+        return computer;
     }
 
     public IComputerBuilder AddMotherBoard(IMotherBoard motherBoard)
     {
-        throw new NotImplementedException();
+        _motherBoard = motherBoard;
+        return this;
     }
 
     public IComputerBuilder AddCPU(ICPU cpu)
     {
-        throw new NotImplementedException();
+        _cpu = cpu;
+        return this;
     }
 
     public IComputerBuilder AddGPU(IGPU gpu)
     {
-        throw new NotImplementedException();
+        _gpu = gpu;
+        return this;
     }
 
     public IComputerBuilder AddRam(IRAM ram)
     {
-        throw new NotImplementedException();
+        _ram = ram;
+        return this;
     }
 
     public IComputerBuilder AddPowerSupply(IPowerSupply powerSupply)
     {
-        throw new NotImplementedException();
+        _powerSupply = powerSupply;
+        return this;
     }
 
     public IComputerBuilder AddCase(ICase pcCase)
     {
-        throw new NotImplementedException();
+        _case = pcCase;
+        return this;
     }
 
     public IComputer Build()
     {
-        throw new NotImplementedException();
+        return new Computer()
+        {
+            MotherBoard = _motherBoard,
+            Cpu = _cpu,
+            Gpu = _gpu,
+            Ram = _ram,
+            PowerSupply = _powerSupply,
+            Case = _case
+        };
     }
 }
