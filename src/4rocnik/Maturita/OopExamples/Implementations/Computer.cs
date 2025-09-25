@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using OopExamples.Interfaces;
+using OopExamples.Interfaces.Exceptions;
 
 namespace OopExamples.Implementations;
 
@@ -53,7 +54,7 @@ public class Computer : IComputer
         }
         catch (Exception ex)
         {
-            throw new ArgumentException("Invalid equation format.", ex);
+            throw new InvalidEquationException();
         }
     }
 

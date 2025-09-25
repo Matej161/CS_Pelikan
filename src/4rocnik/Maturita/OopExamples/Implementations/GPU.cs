@@ -44,18 +44,25 @@ public class GPU : IGPU
         {
             throw new ComponentAlreadyConnectedException();
         }
-        else if (AvailableConnectors.Contains != null)
+        else if (AvailableConnectors != null)
         {
             throw new InvalidConnectorException();
         }
-        else (ConnectedMonitors.Contains(monitor))
+        else if (ConnectedMonitors.Contains(monitor))
         {
-            
+            ConnectedMonitors.ToList().Add(monitor);
         }
     }
 
     public void DisconnectMonitor(IMonitor monitor)
     {
-        throw new NotImplementedException();
+        if (ConnectedMonitors.Contains(monitor))
+        {
+            ConnectedMonitors = null;
+        }
+        else
+        {
+            throw new ComponentNotConnectedException();
+        }
     }
 }

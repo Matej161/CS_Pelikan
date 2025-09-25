@@ -1,4 +1,6 @@
+using OopExamples.Implementations;
 using OopExamples.Interfaces;
+using Monitor = OopExamples.Implementations.Monitor;
 
 namespace OopExamples.Tests;
 
@@ -21,17 +23,22 @@ public class NewComputerTests
 
     public NewComputerTests()
     {
-        // tests
+        // testsdsadsa
         // Create instance of interfaces, using your implementation
-        ComputerConfiguration = null;
-        Builder = null;
-        Computer = null;
-        Person = null;
-        Company = null;
+        ComputerConfiguration = new ComputerConfiguration();
+        Builder = new ComputerBuilder();
+        Computer = new Computer();
+        Person = new Person();
+        Company = new Company();
         Monitors = MonitorConnectors.Select<GPUConnector, IMonitor>(connector =>
-            // new Monitor("name", connector)
-            (IMonitor)null
+            new Monitor("name", connector)
         );
+
+        ComputerConfiguration.Gpu = new GPU();
+        ComputerConfiguration.Cpu = new CPU();
+        ComputerConfiguration.Ram = new RAM();
+        ComputerConfiguration.PowerSupply = new PowerSupply();
+        ComputerConfiguration.MotherBoard = new Motherboard();
 
         // Do not touch this
         Computer = Computer ?? throw new System.NotImplementedException($"{nameof(Computer)} not implemented");
